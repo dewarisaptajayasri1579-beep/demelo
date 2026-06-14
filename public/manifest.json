@@ -1,0 +1,27 @@
+{
+  "short_name": "DEMELO",
+  "name": "DEMELO - AI Agent Digital Marketing UMKM",
+  "description": "Asisten Pintar AI Agent Content Creator & Media Sosial untuk UMKM Indonesia",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/illustrations/120/000000/rocket.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "https://img.icons8.com/illustrations/192/000000/rocket.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://img.icons8.com/illustrations/512/000000/rocket.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#064e3b",
+  "theme_color": "#059669",
+  "display": "standalone",
+  "orientation": "portrait"
+}

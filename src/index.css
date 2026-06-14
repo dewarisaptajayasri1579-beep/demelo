@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+.glass-panel-active {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  box-shadow: 0 0 20px rgba(5, 150, 105, 0.15);
+}
+
+/* Theme Light Mode Custom Rules */
+.theme-light {
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-input: #ffffff;
+  --border-light: #e2e8f0;
+  --text-main: #0f172a;
+  --text-sub: #334155;
+  --text-muted: #64748b;
+}
+
+.theme-light, 
+.theme-light main {
+  background-color: var(--bg-main) !important;
+  color: var(--text-main) !important;
+}
+
+/* Structural elements style mapping */
+.theme-light .bg-slate-950,
+.theme-light .bg-slate-950\/80,
+.theme-light .bg-slate-950\/50 {
+  background-color: #f1f5f9 !important;
+}
+
+.theme-light .bg-slate-900,
+.theme-light .bg-slate-900\/95,
+.theme-light aside.bg-slate-900\/95 {
+  background-color: var(--bg-card) !important;
+}
+
+.theme-light .bg-slate-850,
+.theme-light .bg-slate-800 {
+  background-color: #f8fafc !important;
+}
+
+.theme-light .bg-emerald-950,
+.theme-light .bg-emerald-950\/80,
+.theme-light .bg-emerald-950\/60 {
+  background-color: rgba(16, 185, 129, 0.08) !important;
+}
+
+.theme-light .bg-amber-950,
+.theme-light .bg-amber-950\/80,
+.theme-light .bg-amber-950\/50 {
+  background-color: rgba(245, 158, 11, 0.08) !important;
+}
+
+.theme-light .bg-purple-950,
+.theme-light .bg-purple-950\/80 {
+  background-color: rgba(139, 92, 246, 0.08) !important;
+}
+
+/* Accent texts mapping */
+.theme-light .text-emerald-300,
+.theme-light .text-emerald-400 {
+  color: #0d9488 !important; /* Elegant Teal */
+}
+
+.theme-light .text-amber-300,
+.theme-light .text-amber-400 {
+  color: #c2410c !important; /* Elegant Orange-Amber */
+}
+
+.theme-light .text-purple-300,
+.theme-light .text-purple-400 {
+  color: #6d28d9 !important; /* Royal Purple */
+}
+
+/* General Texts mapping */
+.theme-light .text-slate-100,
+.theme-light .text-white {
+  color: var(--text-main) !important;
+}
+
+.theme-light .text-slate-200,
+.theme-light .text-slate-300 {
+  color: var(--text-sub) !important;
+}
+
+.theme-light .text-slate-400,
+.theme-light .text-slate-500 {
+  color: var(--text-muted) !important;
+}
+
+.theme-light .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+/* Borders */
+.theme-light .border-slate-800,
+.theme-light .border-slate-855,
+.theme-light .border-slate-850,
+.theme-light .border-emerald-955,
+.theme-light .border-emerald-950\/20,
+.theme-light .border-emerald-950\/40,
+.theme-light .border-amber-500\/30,
+.theme-light .border-purple-500\/30,
+.theme-light md\:border-r,
+.theme-light .border-r {
+  border-color: var(--border-light) !important;
+}
+
+/* Forms */
+.theme-light input,
+.theme-light select,
+.theme-light textarea {
+  background-color: var(--bg-input) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-light) !important;
+}
+
+.theme-light input::placeholder,
+.theme-light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Interactive navigation hovers */
+.theme-light .hover\:bg-slate-800\/40:hover,
+.theme-light .hover\:bg-slate-800\/30:hover,
+.theme-light .hover\:bg-slate-800/10:hover {
+  background-color: #f1f5f9 !important;
+}
+
+.theme-light .hover\:text-slate-200:hover,
+.theme-light .hover\:text-white:hover {
+  color: var(--text-main) !important;
+}
+
+/* custom glass panels in light mode */
+.theme-light .glass-panel {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-color: rgba(16, 185, 129, 0.15) !important;
+  color: var(--text-main) !important;
+}
+
+.theme-light .glass-panel-active {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
+  box-shadow: 0 4px 20px rgba(5, 150, 105, 0.08) !important;
+  color: var(--text-main) !important;
+}
+
+.theme-light .glass-panel p,
+.theme-light .glass-panel span {
+  color: var(--text-main) !important;
+}
+
+/* Canvas background card color indicator helper */
+.theme-light canvas {
+  background-color: #ffffff !important;
+  border: 1px solid var(--border-light) !important;
+}
+
+/* Pulse animation for AI action indicators */
+@keyframes spark {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.2)); }
+  50% { filter: drop-shadow(0 0 15px rgba(16, 185, 129, 0.5)); }
+}
+
+.ai-glow {
+  animation: spark 3s infinite ease-in-out;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "DEMELO",
+  "description": "Asisten Pintar AI Agent Pemasaran Digital & PWA untuk UMKM Indonesia. Unggah produk, analisa brand gratis, generate copywriting, foto produk estetik, naskah video Reels/TikTok, serta simulasi posting sosial.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
