@@ -181,7 +181,7 @@ function CustomSelect({ value, onChange, options, placeholder = "Pilih opsi..." 
         <div className="absolute z-50 w-full mt-2 bg-white border border-zinc-200 rounded-2xl shadow-xl overflow-hidden elya-shadow animate-in fade-in slide-in-from-top-2 duration-200">
           <div className="p-2 border-b border-zinc-100 bg-zinc-50/50">
             <div className="relative">
-              <Search className="w-3.5 h-3.5 text-zinc-400 absolute left-3 top-1/2 -tranzinc-y-1/2" />
+              <Search className="w-3.5 h-3.5 text-zinc-400 absolute left-3 top-1/2 -translate-y-1/2" />
               <input 
                 type="text" 
                 placeholder="Cari..." 
@@ -864,11 +864,19 @@ export default function App() {
         </div>
       </div>
 
+      {/* Mobile Sidebar Overlay Backdrop */}
+      {mobileMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 md:hidden transition-opacity"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+
       {/* Navigation Sidebar (Desktop persistent, Mobile sliding drawer) */}
       <aside className={`
         fixed inset-y-0 left-0 z-50 w-64 bg-white border-r border-zinc-100 p-5 flex flex-col justify-between transition-transform duration-300 transform
-        md:relative md:tranzinc-x-0 elya-shadow-active
-        ${mobileMenuOpen ? 'tranzinc-x-0' : '-tranzinc-x-full md:tranzinc-x-0'}
+        md:relative md:translate-x-0 elya-shadow-active
+        ${mobileMenuOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
       `}>
         <div className="flex flex-col gap-6">
           {/* Logo Brand */}
